@@ -3,6 +3,7 @@
 We will start from a basic example where we only have an empty `Matrix` class and a test which use it.
 
 Basic folder structure:
+```
 ├── CMakeLists.txt
 ├── include
 │   ├── newton
@@ -13,6 +14,7 @@ Basic folder structure:
 └── test
     ├── CMakeLists.txt
     └── test1.cpp
+```
 
 We have a main `CMakeLists.txt` file in the root of the project, which links to each subsirectory.
 
@@ -56,12 +58,6 @@ add_executable (test1 test1.cpp)
 set_property(TARGET test1 PROPERTY CXX_STANDARD 17)
 target_include_directories(test1 PRIVATE ${PROJECT_SOURCE_DIR}/include)
 ```
-
-
-# Build Configuration
-https://ryandeangraham.medium.com/building-a-header-only-library-hello-world-f9dd05ac1066
-- I've used CMake
-
 
 # References
 - https://github.com/CppCon/CppCon2019/blob/master/Presentations/back_to_basics_move_semantics_part_1/back_to_basics_move_semantics_part_1__klaus_iglberger__cppcon_2019.pdf
